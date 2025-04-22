@@ -1,0 +1,361 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img\logo\Garcia Tavern-logos.jpeg" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+	
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>TECH BUDDIES </title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+    <marquee> Welcome to Tech Buddies's Food Hub  </marquee>	
+</head>
+<body>
+    <!--  animated nav bar -->
+     <div class="navBar" id="nv">
+        <nav>
+            <i class="bi bi-justify" onclick="alert('heelo')" id="hamMenu"></i>
+            <ul>
+                <!-- main nav section -->
+                <li><a href='?page=home'><em>Home</em> </a></li>
+                <li><a href='?page=menu'><em>Menu</em> </a></li>
+                <li><a href='?page=ourstory'><em>Our Story</em>  </a></li>
+                <li><a href='?page=contactus'><em>Contact Us</em> </a></li>
+		<li><a href="login"><em>Login</em> </a></li>
+		<li><a href="register"><em>Register</em> </a></li>
+
+                <!-- icons social and phone -->
+                <li class="socialIcon"><a href="call:1800110210112"><i class="bi bi-telephone-forward"></i></a></li>
+                <li class="socialIcon"><a href="instgram.com/example"><i class="bi bi-instagram"></i></a></li>
+                <li class="socialIcon"><a href="mailto:example@example.com"><i class="bi bi-envelope-fill"></i></a></li>
+		<label for="username" style="position: right; padding: 100px;" ></label>
+		    <span id="username">{{ user.email if user else 'User' }}</span>
+            </ul>
+        </nav>
+
+    </div>  
+    
+    <div class="header">
+
+    <!-- main logo !-->
+	<div class="IntroMsg">
+    <img  alt="Tech Buddie's where food meets passion" 
+    class="logo" src="https://i.ibb.co/WK9hkx8/Garcia Tavern-logos-transparent.png" id="introLogo" width="200" height="200" />
+    </div>
+        <!-- subject-->
+	<div class='IntroMsg'>
+        <h1><em>Welcome To Tech Buddie's Food Hub And Restaurant </h1>
+    </br>
+        <span>
+           Let us host your next special occassion
+        </span>
+        <h2>
+       <a href="call:804538435" style="text-decoration: none; color: white;"> <i class="bi bi-telephone-forward-fill"> <span> Contact Us today </span></i></a>
+       
+        </h2>
+	</div>
+        <!-- review name-->
+
+        <!-- title system for content-->
+
+
+    <form method="post" action="/order">	
+     <div class="menu">   
+        <div class="menuIntro">     
+            <!-- img tile system -->
+            <img src="https://i.ibb.co/QCxY7FT/michael-discenza-Mxfcoxyc-H-Y-unsplash.jpg"/>
+            <img src="https://i.ibb.co/cNrYC6S/izabela-rutkowski-Nme6-Tb-Wu-Vp-A-unsplash.jpg" />
+        </div>
+            
+    <!-- menu layout-->
+        <section id="home-menu">
+            <h2>DRINK MENU</h2>
+			<h3> Sprits, wine, and beer</h3>
+	<ul>
+		<li>
+			<span class="dish">Red Bull 125ml</span>
+                        <span class="Price">Rs130
+				<!-- <label class="order" ="dropdown1">Select Quantity:</label> -->
+		        <select class="order" name="1" id="dropdown1">
+                            <option value="0"></option>
+		            <option value="1">1</option>
+		            <option value="2">2</option>
+		            <option value="3">3</option>
+			</select></span>
+                        <span class="Description">choiceeee of soft drinks.</span>
+		</li>
+		<li>
+			<span class="dish">Tropicana.</span>
+			<span class="Price">Rs120
+                        <select class="order" name="2" id="2">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description"> choice of Juice or Soda.</span>
+		</li>
+		<li>
+			<span class="dish">Whisky 1oz.</span>
+			<span class="Price">Rs1600
+                        <select class="order" name="3" id="3">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Whisky and choice of juice or soda.</span>
+		</li>
+		<li>
+			<span class="dish">Sprit.</span>
+			<span class="Price">Rs100
+                        <select class="order" name="4" id="4">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Sprit served with ice with glass.</span>
+		</li>
+		<li>
+			<span class="dish">Red wine.</span>
+			<span class="Price">Rs2700
+                        <select class="order" name="5" id="5">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">8oz Red wine, ask server for our wine selection. </span>
+		</li>
+		<li>
+			<span class="dish">MONSTER 350ml.</span>
+			<span class="Price">Rs120
+                        <select class="order" name="6" id="6">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">ask server for our energy drinks selection.</span>
+		</li>
+		<li>
+			<span class="dish">STORM .</span>
+			<span class="Price">Rs 120
+                        <select class="order" name="7" id="7">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">taste it just like a cafe coffee.</span>
+		</li>
+		<li>
+			<span class="dish">C4 250ml .</span>
+			<span class="Price">Rs1000
+                        <select class="order" name="8" id="8">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">The Rock Brand of your choice</span>
+		</li>
+	</ul>
+    </section>
+    <!-- end of menu layout -->
+    </div>
+
+    <div class="menu">   
+        <div class="menuIntro">    
+            <img  id="caption_img"src="https://i.ibb.co/9g9yg5G/chad-montano-l-P5-MCM6n-Z5-A-unsplash.jpg"  />  
+            <img id="caption_img" src="https://i.ibb.co/q1HKkyL/ella-olsson-4d-Qia-WKi-L-Y-unsplash.jpg" />
+        </div>
+ 
+     <section id="home-menu">
+            <h2>FOOD MENU</h2>
+			<h3> Entrees, mains, and handhelds</h3>
+	<ul>
+		<li>
+			<span class="dish">Nachos</span>
+			<span class="Price">Rs200
+                        <select class="order" name="9" id="9">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">cheese, onions, tomotoes. 
+			</span>
+		</li>
+		<li>
+			<span class="dish">Tacos.</span>
+			<span class="Price">Rs1452
+                        <select class="order" name="10" id="10">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">chicken or beef with your choice of side.</span>
+		</li>
+		<li>
+			<span class="dish">Chicken rice bowl.</span>
+			<span class="Price">Rs816
+                        <select class="order" name="11" id="11">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">
+				brown rice, and veggies, served with choice or sauce 
+			</span>
+		</li>
+		<li>
+			<span class="dish">Paneer Malai Chaap</span>
+			<span class="Price">Rs650
+                        <select class="order" name="12" id="12">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">
+				Juicy Paneer Malai Chaap served with choice of sauce.
+			</span>
+		</li>
+		<li>
+			<span class="dish">Kadai Paneer.</span>
+			<span class="Price">Rs540
+                        <select class="order" name="13" id="13">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Steak and your choice of side.</span>
+		</li>
+		<li>
+			<span class="dish">Chilli Paneer.</span>
+			<span class="Price">Rs550
+                        <select class="order" name="14" id="14">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Your choice of Laziz Paneer.</span>
+		</li>
+		
+	</ul></section></div>
+
+
+    <div class="menu">   
+        <div class="menuIntro">    
+	     <img src="{{ url_for('static', filename='images/dish1.jpg') }}" alt="Your Image">
+             <img src="https://i.ibb.co/rsxRJMX/oscar-nord-5-CPn8-NE2-Tc-unsplash.jpg" />
+        </div>
+     <section id="home-menu">
+            <h2>DESERT MENU</h2>
+			<h3> Deserts and sweets</h3>
+	<ul>
+		<li>
+			<span class="dish">Chocolate cake .</span>
+			<span class="Price">Rs260
+                        <select class="order" name="15" id="15">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Loaded Chocolate cake with fudge topping.</span>
+		</li>
+		<li>
+			<span class="dish">NY cheesecake.</span>
+			<span class="Price">Rs692
+                        <select class="order" name="16" id="16">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">NY cheesecake toped with strawberry topping.</span>
+		</li>
+		<li>
+			<span class="dish">Apple pie.</span>
+			<span class="Price">Rs6466
+                        <select class="order" name="17" id="17">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Warm apple pie tooped with icecream.</span>
+		</li>
+		<li>
+			<span class="dish">Fruit cake.</span>
+			<span class="Price">Rs640
+                        <select class="order" name="18" id="18">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">.</span>
+		</li>
+		<li>
+			<span class="dish">Sopaipillas</span>
+			<span class="Price">Rs6467
+                        <select class="order" name="19" id="19">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">Light, crispy pastry puffs, sopaipillas are a sweet way to round out a spicy meal.</span>
+		</li>
+		<li>
+			<span class="dish">Creamy Caramel Flan.</span>
+			<span class="Price">Rs 200
+                        <select class="order" name="20" id="20">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">A small slice of this impressively rich, creamy, caramel flan dessert goes a long
+				way.</span>
+		</li>
+		<li>
+			<span class="dish">Shortcut Tres Leches Cake</span>
+			<span class="Price">Rs 300
+                        <select class="order" name="21" id="21">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">My mom's favorite cake is tres leches, a butter cake soaked in three kinds of milk. </span>
+		</li>
+		<li>
+			<span class="dish">Pressure-Cooker Pumpkin Flans</span>
+			<span class="Price">Rs 644
+                        <select class="order" name="22" id="22">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></span>
+			<span class="Description">This silky, smooth dessert captures the essence and elegance of fall. </span>
+		</li>
+	</ul></section></div></html>
+
+	<button type="submit">Order Submit</button>
+    </form>
+</div>
+</body>
+
+
+
+ 

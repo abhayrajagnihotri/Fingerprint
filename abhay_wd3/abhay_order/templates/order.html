@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+</head>
+<body>
+	<!-- <h1>Order Summary of {{ user_name }} </h1> -->
+	<h1>Order Summary </h1>
+
+    {% if order_data %}
+        <table border="1">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            {% for item in order_data %}
+                <tr>
+                    <td>{{ item['Item'] }}</td>
+                    <td>{{ item['Price'] }}</td>
+                    <td>{{ item['Quantity'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No items in the order.</p>
+    {% endif %}
+    
+    <h1> Total charges of government GST(10%) : {{ '%.2f' % (total * 1.1) }}</h2>
+</body>
+</html>
+
