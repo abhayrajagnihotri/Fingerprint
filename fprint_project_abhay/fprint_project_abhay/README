@@ -1,0 +1,22 @@
+keep all .tif images in folder like database2 i am using
+
+Replace image directory path in train
+Currently it is training_images in both
+
+Can download .tif images from below link
+https://www.neurotechnology.com/download/UareU_sample_DB.zip
+
+################################################
+First Train your model once
+	python train.py
+
+# Train it everytime if you add new images
+
+Now Run predict file and paas image your want to predict like
+	python predict.py
+and open browser to predict
+	 http://127.0.0.1:5000
+
+################################################
+
+

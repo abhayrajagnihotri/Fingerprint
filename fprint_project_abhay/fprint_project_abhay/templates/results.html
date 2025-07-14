@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        img {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+	    <h1>Prediction Results</h1>
+            <!-- <h2>Uploaded Image:</h2> -->
+
+	    <!-- <img src="{{ test_image }}" alt="Uploaded Image"> -->
+
+        {% if matches %}
+            <h2>Closest Matches:</h2>
+            <ul>
+                {% for match in matches %}
+                    <li>
+                        <strong>{{ match[0] }}</strong> - {{ match[1] }} good matches
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+		<p style="color: red;">No suitable matches found.</p>
+        {% endif %}
+
+        <a href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>
+
